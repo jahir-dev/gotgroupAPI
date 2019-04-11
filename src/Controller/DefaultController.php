@@ -5,13 +5,23 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends Controller
 {
+
     /**
-     * @Route("/contact", name="default")
+     * @Route("/", name="default")
      */
-    public function index(Request $request,\Swift_Mailer $mailer)
+    public function index()
+    {
+        return new Response("Welcome to gotgroup");
+    }
+
+    /**
+     * @Route("/contact", name="contact")
+     */
+    public function contact(Request $request,\Swift_Mailer $mailer)
     {
         
         $mail = json_decode($request->getContent());
