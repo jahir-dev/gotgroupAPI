@@ -6,6 +6,7 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "doctrine/annotations": "1.4",
+        "nelmio/cors-bundle": "^1.5",
         "symfony/console": "3.4.*",
         "symfony/dotenv": "3.4.*",
         "symfony/flex": "^1.1",
@@ -58,5 +59,8 @@
             "allow-contrib": false,
             "require": "3.4.*"
         }
+    },
+    "require-dev": {
+        "symfony/var-dumper": "3.4.*"
     }
 }
